@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.header-solid {
+  background-color: #b50e1a;
+  height: 50vh;
+}
+
+.header-photo {
+  height: 50vh;
+}
+.header-container {
+  align-items: center;
+}
+
+.header-container > .overlay {
+  height: 40vh;
+  text-align: right;
+  justify-content: left;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  position: absolute;
+  overflow: hidden;
+  top: 40px;
+  left: 3vw;
+  font-size: 3rem;
+  font-family: "Libre Caslon Text", serif;
+  color: #fff;
+}
+
+.content-orange-full {
+  display: flex;
+  background-color: #e6710b;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Libre Caslon Text", serif;
+}
+
+.italic {
+  font-style: italic;
+}
+
+p {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
