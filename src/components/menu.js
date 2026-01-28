@@ -13,11 +13,26 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 const pages = ["Camps", "Animals", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      allMarkdownRemark {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+            }
+          }
+        }
+      }
+    }
+  `);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
