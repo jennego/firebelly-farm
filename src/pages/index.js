@@ -8,6 +8,7 @@ import Footer from "../components/footer.js";
 const IndexPage = () => {
   return (
     <div>
+      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       <ResponsiveAppBar> </ResponsiveAppBar>
 
       <Grid
