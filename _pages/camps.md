@@ -1,6 +1,7 @@
 ---
 title: Camps
 thumbnail: /images/uploads/img_6135.jpg
+slug: camps
 ---
 Camps for 2026 will be announced later!
 
