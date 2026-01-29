@@ -1,6 +1,7 @@
 import * as React from "react";
 import ResponsiveAppBar from "../components/menu";
 import Footer from "../components/footer";
+import { Container } from "@mui/material";
 
 const AnimalsPage = () => {
   return (

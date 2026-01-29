@@ -1,14 +1,15 @@
 import * as React from "react";
 import ResponsiveAppBar from "../components/menu";
 import Footer from "../components/footer";
+import { Container } from "@mui/material";
 
-const CampPage = () => {
+const HorsesPage = () => {
   return (
     <div>
       <ResponsiveAppBar />
       <div className="heading-header">
         <div className="heading-header-text">
-          <h2>Contact</h2>
+          <h2>Horses</h2>
         </div>
       </div>
       <Container
@@ -28,4 +29,4 @@ const CampPage = () => {
   );
 };
 
-export default CampPage;
+export default HorsesPage;
