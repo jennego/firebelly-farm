@@ -1,6 +1,6 @@
 ---
-title: Animals
-slug: "{{slug}}"
+title: Horses
+slug: horses
 ---
 ## Ray
 
