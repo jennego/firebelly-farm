@@ -17,4 +17,4 @@ collections:
           widget: "image",
           required: false,
         }
-      - { label: "slug", name: "slug", widget: "text", default: "{{slug}}" }
+      - { label: "slug", name: "slug", widget: "text", default: { { slug } } }
