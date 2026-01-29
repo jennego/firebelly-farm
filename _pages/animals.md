@@ -8,6 +8,8 @@ Show Name: Happenstance <br>
 DOB: May 1, 2005 <br>
 Dutch Warmblood/Appendix Quarter Horse Gelding
 
+![black horse](/images/uploads/ray.jpg "Ray")
+
 Also known as "Ray Ray", "Ray-dough" and "Lerato" , Ray is a hilarious ridiculous old man who is quite particular about his life and has enough opinions to rival a mare. A former show jumper, he now is doing low level dressage and sometimes dabbles in other flat disciplines. Ray is passionate about food and loves rolling in the dirt, monitoring his mares, making mares squeal and treat stretches (or anything with a treat, really).
 
 ## Athena
