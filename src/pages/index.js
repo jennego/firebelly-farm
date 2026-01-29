@@ -23,8 +23,11 @@ const IndexPage = () => {
             src="../images/sleepinghorses.jpg"
             objectFit="cover"
             layout="fullWidth"
-            style={{ maxHeight: "50vh" }}
             objectPosition="50% 90%"
+            style={{
+              height: "50vh",
+              width: "100%",
+            }}
           />
         </Grid>
 

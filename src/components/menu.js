@@ -14,9 +14,15 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
+import { navigate } from "gatsby";
 
-const pages = ["Camps", "Animals", "Contact"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const pages = [
+  { name: "Camps", slug: "/camps" },
+  { name: "Horses", slug: "/horses" },
+  { name: "Other Animals", slug: "/animals" },
+  { name: "Contact", slug: "/contact" },
+  { name: "Home", slug: "/" },
+];
 
 function ResponsiveAppBar() {
   const data = useStaticQuery(graphql`
@@ -39,17 +45,19 @@ function ResponsiveAppBar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+  const isCurrent = ({ isCurrent }) => {
+    return isCurrent ? { className: "nav-active" } : { className: "nav-link" };
   };
+  const FullNavLink = (props) => (
+    <Link getProps={isCurrent} {...props}>
+      {props.children}
+    </Link>
+  );
 
   return (
     <AppBar position="static" style={{ background: "black" }}>
@@ -83,8 +91,12 @@ function ResponsiveAppBar() {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+                <MenuItem key={page.name} onClick={() => handleCloseNavMenu}>
+                  <Typography sx={{ textAlign: "center" }}>
+                    <Link className="mobile-nav" to={page.slug}>
+                      {page.name}
+                    </Link>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -94,13 +106,9 @@ function ResponsiveAppBar() {
             style={{ justifyContent: "center" }}
           >
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
+              <FullNavLink getProps={isCurrent} {...page} to={page.slug}>
+                {page.name}
+              </FullNavLink>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}></Box>
